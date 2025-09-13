@@ -5,7 +5,7 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: '../client/dist',
+    outDir: '../frontend/dist',
   },
   server: {
     proxy: {
