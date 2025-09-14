@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-MONGO_URI="mongodb+srv://db-user:@db-user@cluster0.co30sro.mongodb.net/guessGame-db?retryWrites=true&w=majority&appName=Cluster0"
+const MONGO_URI = process.env.MONGO_URI 
 
 mongoose.connect(MONGO_URI, { 
 	useNewUrlParser: true, 
