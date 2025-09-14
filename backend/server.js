@@ -1,7 +1,10 @@
 const express = require('express');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const cors = require('cors');
 const gameRoutes = require('./routes/game');
+const dotenv = require('dotenv') 
+dotenv.config()
+
 const path = require('path')
 
 const currentDir= path.resolve();
@@ -14,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-const MONGO_URI = process.env.MONGO_URI 
+/*const MONGO_URI = process.env.MONGO_URI 
 
 mongoose.connect(MONGO_URI, { 
 	useNewUrlParser: true, 
@@ -23,7 +26,7 @@ mongoose.connect(MONGO_URI, {
 })
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => console.log('MongoDB connected'));
+db.once('open', () => console.log('MongoDB connected'));*/
 
 // Routes
 app.use('/api/game', gameRoutes);
