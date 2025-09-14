@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const gameRoutes = require('./routes/game');
 const dotenv = require('dotenv') 
+const mongoose = require('./config/db')
 dotenv.config()
 
 const path = require('path')
